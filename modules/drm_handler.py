@@ -288,7 +288,7 @@ async def drm_handler(bot: Client, m: Message):
          
             elif "https://cpvod.testbook.com/" in url or "classplusapp.com/drm/" in url:
                 url = url.replace("https://cpvod.testbook.com/","https://media-cdn.classplusapp.com/drm/")
-                url = f"https://sainibotsdrm.vercel.app/api?url={url}&token={cptoken}&auth=4443683167"
+                url = f"https://sainibotsdrm.vercel.app/api?url={url}&token=eyJhbGciOiJIUzM4NCIsInR5cCI6IkpXVCJ9.eyJpZCI6MTYzMjI1NzI2LCJvcmdJZCI6NzYxOCwidHlwZSI6MSwibW9iaWxlIjoiOTE2OTU3NjMwNzMyIiwibmFtZSI6IlJhaHVsIFBhdGVsIiwiZW1haWwiOiIwYmU0MzBmZC03ZTNiLTQ4NjMtOGEzYi0zYTE5ZDA2NDJmNzlAbWFpbHNsdXJwLmJpeiIsImlzRmlyc3RMb2dpbiI6dHJ1ZSwiZGVmYXVsdExhbmd1YWdlIjoiRU4iLCJjb3VudHJ5Q29kZSI6IklOIiwiaXNJbnRlcm5hdGlvbmFsIjowLCJpc0RpeSI6dHJ1ZSwibG9naW5WaWEiOiJPdHAiLCJmaW5nZXJwcmludElkIjoiMTAzYjI2NGEwMWRjYmUwOTcyYWVmZTgzMzY0ODkiLCJpYXQiOjE3NTg1NjY0MjYsImV4cCI6MTc1OTE3MTIyNn0.zGPA0eQgzRBZAukHCPGOwlYnXANqqJ4tvN4hmhNYAks-FykNqU5I5-Jy-PqeCvQ1&auth=4443683167"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
